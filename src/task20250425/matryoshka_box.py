@@ -157,10 +157,10 @@ class MatryoshkaBoxEnv(BaseEnv):
                         <= pose[i - 1, 1] + self.sizes[i - 1][1] / 2
                     )
                     and (
-                        pose[i - 1, 2] - self.sizes[i - 1][2] / 2
-                        <= pose[i, 2] - self.sizes[i][2] / 2
-                        <= pose[i, 2] + self.sizes[i][2] / 2
-                        <= pose[i - 1, 2] + self.sizes[i - 1][2] / 2
+                        pose[i - 1, 2] - self.thickness[i - 1][2] / 2
+                        <= pose[i, 2] - self.thickness[i][2] / 2
+                        <= pose[i, 2] + self.sizes[i][2]
+                        <= pose[i - 1, 2] + self.sizes[i - 1][2]
                     )
                 )
 
